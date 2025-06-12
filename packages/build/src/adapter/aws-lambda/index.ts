@@ -15,7 +15,7 @@ const lambdaBuildPlugin = (pluginOptions?: LambdaBuildOptions): Plugin => {
       ...{
         entryContentAfterHooks: [
           async (appName) => {
-            let code = "import { handle } from 'hono/aws-lambda'\n"
+            let code = 'import { handle } from \'hono/aws-lambda\'\n'
             code += `export const handler = handle(${appName})`
             return code
           },
